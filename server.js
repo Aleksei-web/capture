@@ -5,8 +5,8 @@ const port = process.env.PORT || 8080
 const __dirname = path.resolve();
 
 const app = express();
-console.log(__dirname)
-app.use(favicon(__dirname + '/build/favicon.svg'));
+app.use(express.static(__dirname));
+app.use(favicon(__dirname + '/build/favicon.png'));
 
 app.use(express.static(path.join(__dirname, 'build')));
 
